@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculater</title>
+  <link rel="stylesheet" href="10-calculator.css">
+</head>
+<body>
+  <h2>Calculator</h2>
+  <p class="js-result calculation"></p>
+  <p>
+    <button class="calculator-button gray-button" onclick="
+      calculate('1');
+      ">1</button>
+    <button class="calculator-button gray-button" onclick="
+      calculate('2');
+    ">2</button>
+    <button class="calculator-button gray-button" onclick="
+      calculate('3');
+    ">3</button>
+    <button class="calculator-button orange-button" onclick="
+      calculate('+');
+    ">+</button>
+  </p>
+
+  <p>
+    <button class="calculator-button gray-button" onclick="
+      calculate('4');
+      ">4</button>
+    <button class="calculator-button gray-button" onclick="
+      calculate('5');
+    ">5</button>
+    <button class="calculator-button gray-button" onclick="
+      calculate('6');
+    ">6</button>
+    <button class="calculator-button orange-button" onclick="
+      calculate('-');
+    ">-</button>
+  </p>
+ 
+  <p>
+    <button class="calculator-button gray-button" onclick="
+      calculate('7');
+      ">7</button>
+    <button class="calculator-button gray-button" onclick="
+      calculate('8');
+    ">8</button>
+    <button class="calculator-button gray-button" onclick="
+      calculate('9');
+    ">9</button>
+    <button class="calculator-button orange-button" onclick="
+      calculate('*');
+    ">*</button>
+  </p>
+
+  <p>
+    <button class="calculator-button gray-button" onclick="
+      calculate('0');
+      ">0</button>
+    <button class="calculator-button gray-button" onclick="
+      calculate('.');
+    ">.</button>
+    <button class="calculator-button gray-button" onclick="
+      calculation = eval(calculation);
+      displayCalculation();
+      saveCalculation(calculation);
+    ">=</button>
+    <button class="calculator-button orange-button" onclick="
+      calculate('/');
+    ">/</button>
+  </p>
+
+  <p>
+    <button class="calculator-button clear-button gray-button" onclick="
+      calculation = '';
+      saveCalculation(calculation);
+      calculate(calculation);
+    ">Reset</button>
+  </p>
+
+  <script>
+    let calculation = localStorage.getItem('calculation') || '';
+    displayCalculation();
+
+    function calculate(value){
+      calculation += value;
+      saveCalculation(calculation);
+      displayCalculation();
+    }
+    function saveCalculation(calculation){
+      localStorage.setItem('calculation',calculation);
+    }
+    function displayCalculation() {
+        document.querySelector('.js-result').innerHTML = calculation;
+    }
+  </script>
+</body>
+</html>

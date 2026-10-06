@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-200 min-h-screen flex items-center justify-center p-4 md:p-10">
+
+<section class="flex flex-col lg:flex-row w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+
+  <!-- Login Side -->
+  <div class="w-full lg:w-1/2 bg-gray-100 p-6 sm:p-10 lg:p-16">
+
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-10">
+      Login Form
+    </h1>
+
+    <div class="flex flex-col gap-6">
+
+      <!-- Email -->
+      <div>
+        <label class="text-lg sm:text-xl font-medium mb-2 block">Email:</label>
+        <input type="email"
+        placeholder="Enter your email"
+        class="w-full border border-gray-400 px-4 py-3 rounded-md shadow-sm
+        focus:outline-none focus:ring-2 focus:ring-gray-500">
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label class="text-lg sm:text-xl font-medium mb-2 block">Password:</label>
+        <input type="password"
+        placeholder="Enter your password"
+        class="w-full border border-gray-400 px-4 py-3 rounded-md shadow-sm
+        focus:outline-none focus:ring-2 focus:ring-gray-500">
+      </div>
+
+      <!-- remember -->
+      <div class="flex justify-between items-center text-sm sm:text-base">
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="w-4 h-4">
+          Remember me
+        </label>
+
+        <a href="#" class="text-blue-600 hover:underline">
+          Forget Password?
+        </a>
+      </div>
+
+      <!-- button -->
+      <button class="mt-4 w-full py-3 sm:py-4 text-lg sm:text-xl font-bold text-white rounded-lg
+      bg-gradient-to-b from-blue-500 to-sky-700
+      hover:from-blue-600 hover:to-sky-800
+      transition active:scale-95">
+        Log In
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Image Side -->
+  <div class="hidden lg:block lg:w-1/2">
+    <img
+      src="windows_365_cloud_pc_microsoft_6-wallpaper-2560x1440.jpg"
+      class="h-full w-full object-cover">
+  </div>
+
+</section>
+
+</body>
+</html>
